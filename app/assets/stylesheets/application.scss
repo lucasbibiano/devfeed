@@ -1,0 +1,46 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+  margin: auto;
+  width: 80%;
+}
+
+.feed {
+
+  &__item {
+    @include make-row();
+
+    &__user {
+      @include make-lg-column(1);
+
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .caption {
+        display: block;
+      }
+    }
+
+    &__content {
+      @include make-lg-column(11);
+
+      &__date {
+        color: #aaa;
+        margin-bottom: 0.5em;
+      }
+
+      &__text {
+        //todo
+      }
+    }
+  }
+}

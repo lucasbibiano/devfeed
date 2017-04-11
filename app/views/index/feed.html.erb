@@ -1,0 +1,26 @@
+<div class="feed">
+  <% @feed_items.each do |item| %>
+    <div class="feed__item">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Atividade</strong> - <%= item.title %></h3>
+        </div>
+        <div class="panel-body">
+          <div class="feed__item__user">
+            <%= image_tag("https:\/\/github-avatar-redirect.herokuapp.com\/#{item.user.name}", alt: item.user.name) %>
+            <span class="caption"><%= item.user.name %></span>
+          </div>
+
+          <div class="feed__item__content">
+            <div class="feed__item__content__date">
+              Created at <strong><%= item.created_at %></strong>. Last updated at <strong><%= item.updated_at %></strong>
+            </div>
+            <div class="feed__item__content__text">
+              <%= item.long_desc %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

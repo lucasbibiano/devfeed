@@ -16,7 +16,7 @@
               Created at <strong><%= item.created_at %></strong>. Last updated at <strong><%= item.updated_at %></strong>
             </div>
             <div class="feed__item__content__text">
-              <%= item.long_desc %>
+              <%= markdown(item.long_desc) %>
             </div>
           </div>
         </div>
